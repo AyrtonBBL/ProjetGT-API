@@ -1,0 +1,30 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify Vibe Badge</title>
+    <link rel="stylesheet" href="/static/Style.css">
+</head>
+<body>
+    {{template "header" .}}
+
+    <div class="hero-container">
+        <h1 class="hero-title">Générez votre <span style="color: #1DB954;">Vibe Badge</span></h1>
+        
+        <p class="hero-text">
+            Transformez vos artistes préférés en cartes à collectionner uniques.<br>
+            Recherchez, piochez et complétez votre classeur musical.
+        </p>
+
+        <div>
+            <a href="/collection" class="btn-start">OUVRIR UN BOOSTER</a>
+            <br><br>
+            <a href="/favoris" style="color: #fff; text-decoration: underline; font-size: 0.9rem;">Voir mon classeur</a>
+        </div>
+    </div>
+
+    {{template "footer" .}}
+</body>
+</html>
+{{end}}

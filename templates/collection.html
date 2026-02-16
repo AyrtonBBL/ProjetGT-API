@@ -1,0 +1,40 @@
+{{define "collection"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Classeur</title>
+    <link rel="stylesheet" href="/static/Style.css">
+</head>
+<body>
+    {{template "header" .}}
+
+    <div class="main-content">
+        <h1>CATALOGUE DES CARTES</h1>
+        
+        <form action="/collection" method="GET" style="margin-bottom: 40px;">
+            <input type="text" name="search" placeholder="Rechercher un Pokémon (Artiste)..." style="padding: 12px; width: 300px; border-radius: 20px; border: none;">
+            <button type="submit" style="padding: 12px 25px; background: #1DB954; border: none; border-radius: 20px; font-weight: bold; cursor: pointer;">CHERCHER</button>
+        </form>
+
+        <div class="binder-grid">
+            {{range .}}
+            <div class="mini-card">
+                <img src="{{.AlbumImg}}" alt="Image">
+                <div class="mini-title">{{.Name}}</div>
+                <div class="mini-artist">{{.Artist}}</div>
+                
+                <div>
+                    <a href="/details?id={{.ID}}" class="btn-small" style="color: #1DB954;">VOIR CARTE</a>
+                    
+                    <a href="/add-favorite?id={{.ID}}" class="btn-small" style="color: #ffd700;">AJOUTER</a>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+
+    {{template "footer" .}}
+</body>
+</html>
+{{end}}

@@ -1,0 +1,156 @@
+:root {
+    --bg-dark: #121212;
+    --card-bg: #181818;
+    --spotify-green: #1DB954;
+    --border-grey: #333333;
+    --text-white: #ffffff;
+    --text-grey: #b3b3b3;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- NAVIGATION --- */
+header {
+    background-color: #000;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--spotify-green);
+    text-align: center;
+}
+
+nav a {
+    color: var(--text-grey);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--spotify-green);
+}
+
+/* --- PAGE D'ACCUEIL --- */
+.hero-container {
+    height: 70vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem; 
+    margin-bottom: 15px;
+}
+
+.btn-start {
+    background-color: var(--spotify-green);
+    color: #000;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* --- LE CLASSEUR  */
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.binder-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Petite carte miniature */
+.mini-card {
+    background-color: var(--card-bg);
+    width: 220px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-grey);
+    text-align: center;
+}
+
+.mini-card img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* --- LA CARTE POKÉMON  */
+.tcg-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.tcg-card {
+    background-color: var(--card-bg);
+    width: 645px;
+    border: 4px solid var(--border-grey);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Cadre de l'image  */
+.art-box {
+    background-color: #000;
+    border: 2px solid var(--spotify-green); 
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.art-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Zone d'informations */
+.info-box {
+    border: 1px solid var(--border-grey);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.move-title {
+    color: var(--spotify-green);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.move-desc {
+    font-size: 0.8rem;
+    color: var(--text-grey);
+}
+
+/* --- FAQ --- */
+.faq-box {
+    background-color: var(--card-bg);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--spotify-green);
+    text-align: left;
+}

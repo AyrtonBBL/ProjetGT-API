@@ -1,0 +1,55 @@
+{{define "list_tracks"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Carte : {{.Name}}</title>
+    <link rel="stylesheet" href="/static/Style.css">
+</head>
+<body>
+    {{template "header" .}}
+
+    <div class="main-content">
+        <div class="tcg-card">
+            
+            <div class="card-header">
+                <span>Musique de Base</span>
+                <span class="hp-text">{{.Popularity}} PV</span>
+            </div>
+
+            <div class="card-image-box">
+                <img src="{{.AlbumImg}}" alt="Artwork">
+            </div>
+
+            <div class="card-moves">
+                <div style="display: flex; justify-content: space-between;">
+                    <span style="color: #ffd700;">Super Rare !</span>
+                    <span style="font-size: 0.8rem;">ID: {{.ID}}</span>
+                </div>
+                
+                <div style="margin-top: 20px;">
+                    <div class="move-name">{{.Name}}</div>
+                    <div class="move-desc">Interprété par l'artiste {{.Artist}}. Une des meilleurs cartes !</div>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <span>Faiblesse: Aucune | Résistance: 100</span>
+                {{if .Preview}}
+                    <audio controls src="{{.Preview}}"></audio>
+                {{else}}
+                    <p>Attaque audio indisponible(il y a pas de droit)</p>
+                {{end}}
+            </div>
+
+        </div>
+
+        <div style="margin-top: 30px;">
+            <a href="/collection" style="color: white; padding: 10px 20px; background: #333; text-decoration: none; border-radius: 5px;">RETOUR AU CLASSEUR</a>
+        </div>
+    </div>
+
+    {{template "footer" .}}
+</body>
+</html>
+{{end}}

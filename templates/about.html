@@ -1,0 +1,33 @@
+{{define "about"}}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/Style.css">
+    <title>FAQ - Projet</title>
+</head>
+<body>
+    {{template "header" .}}
+
+    <div class="main-content">
+        <h1 style="color: #1DB954;">FAQ - À propos du projet</h1>
+
+        <div class="faq-box">
+            <h3>C'est quoi ce projet ?</h3>
+            <p>C'est un site en Go qui utilise l'API Spotify pour générer des cartes musicaux personnalisés type Pokémon.</p>
+        </div>
+
+        <div class="faq-box">
+            <h3>Comment j'ai géré mon temps ?</h3>
+            <p>J'ai d'abord fait la récupération des 100 musiques depuis mon Spotify, puis j'ai créé tout mes go en me basant sur la demo, puis j'ai fais les HTML et enfin le CSS.</p>
+        </div>
+
+        <div class="faq-box">
+            <h3>Pourquoi ces outils ?</h3>
+            <p>J'ai utilisé Go pour le serveur et l'API Spotify pour avoir accès à mes titres et au score de popularité pour faire les pv.</p>
+        </div>
+    </div>
+
+    {{template "footer" .}}
+</body>
+</html>
+{{end}}
